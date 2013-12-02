@@ -1,0 +1,34 @@
+<div class="styleguide">
+
+  <h3>
+    <%= section.section %> <em><%= section.filename %></em>
+  </h3>
+  <div class="styleguide-description">
+    <p><%= section.description %></p>
+    <% if modifiers.any? %>
+      <ul class="styleguide-modifier">
+        <% section.modifiers.each do |modifier| %>
+          <li><strong><%= modifier.name %></strong> - <%= modifier.description %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+
+  <div class="styleguide-elements">
+    <div class="styleguide-elements-element">
+      <%= html.gsub('$modifier_class', '') %>
+    </div>
+    <% modifiers.each do |modifier| %>
+      <div class="styleguide-elements-element styleguide-elements-modifier">
+        <span class="styleguide-elements-modifier-name"><%= modifier.name %></span>
+        <%= html.gsub('$modifier_class', " #{modifier.class_name}") %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="styleguide-html">
+    <pre><code><%= h html.gsub('$modifier_class', '') %></code></pre>
+  </div>
+
+</div>
+

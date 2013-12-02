@@ -1,0 +1,94 @@
+body {
+  color: #2d2d2d;
+}
+
+header {
+  padding: 15px;
+  background-color: #e6e6e6;
+}
+
+header > h1 {
+  margin: 0;
+}
+
+
+#wrap {
+  width: 600px;
+  margin: 0 auto;
+}
+
+main {
+}
+
+main > h2 {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.styleguide {
+  border: 1px solid #ccc;
+}
+
+
+.styleguide > h3 {
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 13px;
+  color: #fff;
+  background-color: #464646;
+}
+
+.styleguide > h3 > em {
+  float: right;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  color: #ccc;
+}
+
+.styleguide-description {
+  padding: 10px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.styleguide-description p {
+  margin-top: 0;
+}
+
+.styleguide-elements-modifier {
+}
+
+.styleguide-elements-element {
+  position: relative;
+  padding: 15px 10px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.styleguide-elements-element:last-child {
+  border-bottom: none;
+}
+
+.styleguide-elements-element.styleguide-modifier {
+}
+
+.styleguide-elements-modifier-name {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 6px;
+  font-size: 13px;
+  background-color: #e6e6e6;
+}
+
+.styleguide-html {
+  padding: 15px 10px;
+  font-size: 14px;
+  background-color: #dcdcdc;
+}
+
+.styleguide-html pre {
+  margin: 0;
+}
+
+.styleguide-html code {
+}
+

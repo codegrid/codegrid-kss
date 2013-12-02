@@ -1,0 +1,26 @@
+/*
+ * ボタンです。
+ *
+ * :hover    - マウスがボタンに乗った状態
+ * :disabled - ボタンが使用不可能な状態
+ *
+ * Styleguide 1.1
+ */
+.button {
+  margin: 0;
+  padding: 5px 15px;
+  font-family: 'Trebuchet MS', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0086AB;
+  border: none;
+  border-radius: 3px;
+}
+.button:hover {
+  background-color: #42AAC7;
+}
+.button:disabled {
+  background-color: #999;
+  cursor: default;
+}

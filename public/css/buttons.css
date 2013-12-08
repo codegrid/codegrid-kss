@@ -1,8 +1,12 @@
 /*
- * ボタンです。
+ * 標準的なボタンとして使用する。<br>
+ * 特徴的な条件のない、普通のフォームやページ内でユーザーに<br>
+ * アクションを求める場面でサイト内の多くの場所で用いる。
  *
- * :hover    - マウスがボタンに乗った状態
- * :disabled - ボタンが使用不可能な状態
+ * :hover               - マウスがボタンに乗った状態
+ * :disabled            - ボタンが使用不可能な状態
+ * .button-danger       - 破壊的な変更をもたらす可能性のあるボタン
+ * .button-danger:hover - .button-dangerにマウスが乗った状態
  *
  * Styleguide 1.1
  */
@@ -24,3 +28,10 @@
   background-color: #999;
   cursor: default;
 }
+.button.button-danger {
+  background-color: #D04255;
+}
+.button.button-danger:hover {
+  background-color: #E38692;
+}
+

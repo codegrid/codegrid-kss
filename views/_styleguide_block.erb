@@ -1,34 +1,69 @@
 <div class="styleguide">
 
   <h3>
+    <%#
+      section.sectionにstyleguide sectionの番号、
+      section.filenameにはコメントの書かれているファイル名が格納されている。
+    %>
     <%= section.section %> <em><%= section.filename %></em>
   </h3>
   <div class="styleguide-description">
+    <%#
+      section.descriptionにはモジュールの説明文が格納されている。
+    %>
     <p><%= section.description %></p>
+    <%#
+      別パターンについての記述情報はmodifiersに配列で渡される。
+      配列の内容が無ければ<ul>の出力を行わない。
+    %>
     <% if modifiers.any? %>
       <ul class="styleguide-modifier">
-        <% section.modifiers.each do |modifier| %>
+        <%#
+          modifiers sectionに書いたパターンの分だけ<li>を繰り返す。
+          modifier.nameはパターンの名前、modifiers.descriptionには
+          そのパターンの説明が格納されている。
+        %>
+        <% modifiers.each do |modifier| %>
           <li><strong><%= modifier.name %></strong> - <%= modifier.description %></li>
         <% end %>
       </ul>
     <% end %>
   </div>
 
+  <%#
+    ここからはレンダリング見本のエリアになる。
+  %>
   <div class="styleguide-elements">
     <div class="styleguide-elements-element">
+      <%#
+        htmlにはヘルパーにブロックで渡されたHTMLコードが格納されている。
+        基本状態の見本なので置換文字列は空文字列で上書きしている。
+      %>
       <%= html.gsub('$modifier_class', '') %>
     </div>
+    <%#
+      再び、別パターンが存在した場合にその数だけ繰り返しを行う。
+    %>
     <% modifiers.each do |modifier| %>
       <div class="styleguide-elements-element styleguide-elements-modifier">
         <span class="styleguide-elements-modifier-name"><%= modifier.name %></span>
+        <%#
+          置換文字を各パターン用のクラス属性値で置き換える。
+          modifier.class_nameにそのための値が格納されている。
+        %>
         <%= html.gsub('$modifier_class', " #{modifier.class_name}") %>
       </div>
     <% end %>
   </div>
 
+  <%#
+    こちらがHTMLコードのエリア。
+  %>
   <div class="styleguide-html">
+    <%#
+      エスケープを行ってHTMLコードを表示する。
+    %>
     <pre><code><%= h html.gsub('$modifier_class', '') %></code></pre>
   </div>
 
 </div>
-

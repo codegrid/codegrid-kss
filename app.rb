@@ -2,8 +2,18 @@ require 'bundler'
 Bundler.require
 
 get '/' do
-  @styleguide = Kss::Parser.new('public/css')
   erb :styleguide
+end
+
+get '/:category' do
+  @styleguide = Kss::Parser.new('public/css')
+
+  case params[:category]
+  when 'buttons'
+    erb :'buttons'
+  else
+    404
+  end
 end
 
 helpers do

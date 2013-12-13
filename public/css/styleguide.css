@@ -8,16 +8,33 @@ header {
 }
 
 header > h1 {
-  margin: 0;
-}
-
-
-#wrap {
-  width: 600px;
+  width: 800px;
   margin: 0 auto;
 }
 
+#wrap {
+  width: 800px;
+  margin: 0 auto;
+}
+
+nav {
+  float: left;
+  width: 160px;
+}
+
+nav li {
+  margin: 10px 0;
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #666;
+}
+
 main {
+  float: right;
+  width: 600px;
 }
 
 main > h2 {
@@ -92,3 +109,16 @@ main > h2 {
 .styleguide-html code {
 }
 
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}

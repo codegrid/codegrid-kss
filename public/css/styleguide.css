@@ -2,42 +2,42 @@ body {
   color: #2d2d2d;
 }
 
-header {
+#layout-header {
   padding: 15px;
   background-color: #e6e6e6;
 }
 
-header > h1 {
+#layout-header > h1 {
   width: 800px;
   margin: 0 auto;
 }
 
-#wrap {
+#layout-wrap {
   width: 800px;
   margin: 0 auto;
 }
 
-nav {
+#layout-nav {
   float: left;
   width: 160px;
 }
 
-nav li {
+#layout-nav li {
   margin: 10px 0;
   list-style-type: none;
 }
 
-nav a {
+#layout-nav a {
   text-decoration: none;
   color: #666;
 }
 
-main {
+#layout-main {
   float: right;
   width: 600px;
 }
 
-main > h2 {
+#layout-main > h2 {
   border-bottom: 1px solid #dcdcdc;
 }
 

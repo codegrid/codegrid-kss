@@ -1,0 +1,40 @@
+/*
+ * 水平並びのメニュー項目。<br>
+ * 項目はそれぞれa要素でリンクを持ち、マウスオーバーと選択中の状態を持つ。
+ *
+ * a:hover    - マウスがメニュー項目に乗った状態
+ * a.selected - 現在選択されている項目
+ *
+ * Styleguide 2.1
+ */
+.menu {
+  width: 100%;
+}
+
+.menu > ul {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.menu > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menu a {
+  padding: 10px 20px;
+  color: #464646;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #eee;
+  background-color: #42AAC7;
+}
+
+.menu a.selected {
+  color: #eee;
+  background-color: #9a9a9a;
+}
+

@@ -7,6 +7,8 @@ get '/styleguide/:category' do
   case params[:category]
   when 'buttons'
     render_styleguide 'buttons'
+  when 'menus'
+    render_styleguide 'menus'
   else
     404
   end

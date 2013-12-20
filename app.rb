@@ -13,10 +13,10 @@ helpers do
     section = @styleguide.section(section)
     modifiers = section.modifiers
     html = capture(&block)
-    @_out_buf.concat erb(:_styleguide_block, :locals => {
-      section: section,
-      modifiers: modifiers,
-      html: html
+    @_out_buf.concat erb(:'styleguide/_styleguide_block', :locals => {
+      :section => section,
+      :modifiers => modifiers,
+      :html => html
     })
   end
 end

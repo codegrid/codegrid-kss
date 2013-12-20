@@ -2,5 +2,5 @@ source "https://rubygems.org"
 
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'kss'
+gem 'kss', '0.4'
 

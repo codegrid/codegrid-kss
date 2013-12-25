@@ -40,4 +40,8 @@ helpers do
   def render_styleguide(template)
     erb :"styleguide/categories/#{template}", :layout => :'styleguide/layout'
   end
+
+  def m(text)
+    markdown text, :input => 'GFM'
+  end
 end

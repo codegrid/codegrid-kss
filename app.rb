@@ -4,11 +4,16 @@ Bundler.require
 get '/styleguide/:category' do
   @styleguide = Kss::Parser.new('public/css')
 
-  case params[:category]
-  when 'buttons'
-    render_styleguide 'buttons'
-  when 'menus'
-    render_styleguide 'menus'
+  category = params[:category]
+
+  categories = [
+    'buttons',
+    'menus',
+  ]
+
+  case category
+  when *categories
+    render_styleguide category
   else
     404
   end

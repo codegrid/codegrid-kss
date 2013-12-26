@@ -37,6 +37,10 @@ body {
   width: 600px;
 }
 
+#layout-main-fill {
+  width: 800px;
+}
+
 #layout-main > h2 {
   border-bottom: 1px solid #dcdcdc;
 }

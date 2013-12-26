@@ -23,6 +23,10 @@ get '/styleguide/' do
   erb :'styleguide/index', :layout => :'styleguide/layout'
 end
 
+get '/' do
+  erb :index
+end
+
 helpers do
   include Rack::Utils; alias_method :h, :escape_html
 
